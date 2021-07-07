@@ -1,0 +1,40 @@
+/*.............................App...................................*/
+.App {
+  text-align: center;
+  min-height: 100vh;
+  color:rgb(138, 9, 37);
+  background-color:rgb(241, 199, 170);
+}
+
+/*.............................Home...................................*/
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Home_img {
+  max-width: 320px;
+}
+
+/*.............................Nav...................................*/
+
+.Nav {
+  background-color: rgb(49, 28, 0);
+  display: flex;
+  flex-wrap: wrap;
+}
+.Nav_link {
+  color:beige;
+  margin: 1em; 
+  font-size: 1.4rem;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,9 +1,11 @@
 /*.............................App...................................*/
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 .App {
   text-align: center;
   min-height: 100vh;
   color:rgb(138, 9, 37);
   background-color:rgb(241, 199, 170);
+  font-family: 'Playball', cursive;
 }
 
 /*.............................Home...................................*/
@@ -12,11 +14,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .Home_img {
   max-width: 320px;
+  border-radius: 100%;
+  border-color: blue;
 }
-
+.Home h1 {
+  font-size: 2em;
+  
+}
 /*.............................Nav...................................*/
 
 .Nav {
@@ -30,11 +38,9 @@
   font-size: 1.4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*.............................ItemsLIst...................................*/
+
+ul {
+  list-style: none;
 }

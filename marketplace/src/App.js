@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import ItemsList from './components/ItemsList';
 import SingleItem from './components/SingleItem';
+import Category from './components/Category';
 
 function App() {
   return (
@@ -19,6 +20,12 @@ function App() {
        </Route>
        <Route exact path="/items/:item_id">
          <SingleItem />
+       </Route>
+       <Route exact path="/categories">
+        <Category />
+       </Route>
+       <Route>
+         <p>404 - Not Found</p>
        </Route>
      </Switch>
      </div>

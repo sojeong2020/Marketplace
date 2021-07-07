@@ -1,6 +1,7 @@
-import React from 'react';
+import ItemsList from "./ItemsList";
 
-const SingleItem = () => {
+const SingleItem = ({items}) => {
+    console.log(items)
     return (
         <div>
             

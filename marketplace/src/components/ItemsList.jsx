@@ -1,31 +1,29 @@
 import {useState, useEffect} from "react"; 
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { fetchItems } from "../utils/api";
 
 
 const ItemsList = () => {
      const [items, setItems] = useState([]);
+     
 
      useEffect(()=> {
-       axios.get('https://nc-marketplace.herokuapp.com/api/items')
-       .then(response => {
-           console.log(response.data.items); 
-          setItems(response.data.items)
-       })
-    },[])  
-
-   
-
-    return (
+         fetchItems().then((itemsFromApi)=>{
+             setItems(itemsFromApi);
+         });
+     },[]);
+      
+return (
         <main>
-            <div>
-            <ul>
+            
+            <ul className="Items_list">
              {items.map((item)=>{
                 return (
                    <li key={item.item_id}>
                    <p>{item.item_name}</p>
-                   <Link to={`/items/:${item.item_id}`}>
-                   <img src={item.img_url} alt={item.item_name}></img>
+                   <Link 
+                   to={`/items/${item.item_id}`} >
+                   <img className="Items_img" src={item.img_url} alt={item.item_name} ></img>
                    </Link>
                    
                    </li>
@@ -33,7 +31,7 @@ const ItemsList = () => {
                }
              )}
             </ul>
-            </div>
+            
         </main>
     );
 };

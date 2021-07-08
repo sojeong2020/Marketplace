@@ -41,6 +41,26 @@
 
 /*.............................ItemsLIst...................................*/
 
-ul {
+.Items_list {
+  list-style: none;
+}
+.Items_img {
+  width:300px;
+  height: 300px;
+}
+
+/*.............................ItemsLIst...................................*/
+
+.Item {
+
+}
+.Item_img {
+  width:500px;
+  height: 500px;
+}
+
+/*.............................Category...................................*/
+
+.Category_list {
   list-style: none;
 }

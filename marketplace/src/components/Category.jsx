@@ -14,7 +14,7 @@ const Category = () => {
 
     return (
         <div>
-            <ul>
+            <ul className="Category_list">
                 {categories.map((category,idx)=>{
                     return(
                         <li key={idx}>

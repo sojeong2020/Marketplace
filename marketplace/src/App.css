@@ -31,12 +31,21 @@
   background-color: rgb(49, 28, 0);
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .Nav_link {
   color:beige;
   margin: 1em; 
   font-size: 1.4rem;
 }
+
+.Nav_user_link {
+  color:blanchedalmond;
+  display:flex;
+  align-items: center;
+  margin-right: 30px;
+} 
+
 
 
 /*.............................ItemsLIst...................................*/

@@ -16,8 +16,6 @@ export const fetchItemById = (item_id) =>{
     })
 }
 
-
-
 export const fetchCategory = () =>{
     return axios
     .get('https://nc-marketplace.herokuapp.com/api/categories')
@@ -30,8 +28,15 @@ export const fetchItemsByCategory = (category_name) =>{
     return axios
     .get(`https://nc-marketplace.herokuapp.com/api/items?category_name=${category_name}`)
     .then((response)=>{
-        console.log(response.data)
         return response.data;
     })
 }
 
+export const fetchUsers = () =>{
+    return axios
+    .get('https://nc-marketplace.herokuapp.com/api/users')
+    .then((response)=>{
+        console.log(response.data.users)
+        return response.data.users
+    })
+}

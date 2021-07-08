@@ -5,6 +5,7 @@ import Header from './components/Header';
 import ItemsList from './components/ItemsList';
 import SingleItem from './components/SingleItem';
 import Category from './components/Category';
+import SortedCategory from './components/SortedCategory';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
        </Route>
        <Route exact path="/categories">
         <Category />
+       </Route>
+       <Route exact path ="/categories/:category_name">
+         <SortedCategory />
        </Route>
        <Route>
          <p>404 - Not Found</p>

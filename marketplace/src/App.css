@@ -64,3 +64,14 @@
 .Category_list {
   list-style: none;
 }
+
+/*.............................SortedCategory...................................*/
+
+.Sorted_category {
+  list-style: none;
+}
+.Category-img {
+  width:200px;
+  height:200px;
+  border-radius: 100%;
+}

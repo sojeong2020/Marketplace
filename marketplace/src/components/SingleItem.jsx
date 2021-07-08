@@ -15,6 +15,7 @@ const SingleItem = () => {
 
     return (
        <main className="Item">
+          
            <h2>{item.item_name}</h2>
            <img className="Item_img" src={item.img_url}alt={item.item_name}></img>
            <p>{item.description}</p>

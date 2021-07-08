@@ -1,28 +1,35 @@
 import {useState, useEffect} from "react"; 
-import axios from 'axios';
+import { fetchCategory } from "../utils/api";
+import { Link } from 'react-router-dom';
+
+
 
 const Category = () => {
     const [categories, setCategories] = useState([]);
+   
 
     useEffect(()=> {
-        axios.get('https://nc-marketplace.herokuapp.com/api/categories')
-        .then(response => {
-            console.log(response.data.categories); 
-           setCategories(response.data.categories)
+        fetchCategory().then((categories)=>{
+         console.log(categories)
+         setCategories(categories)
         })
-     },[]) 
+        },[])
 
-    return (
+return (
         <div>
             <ul className="Category_list">
                 {categories.map((category,idx)=>{
                     return(
                         <li key={idx}>
-                            <p>{category.category_name}</p>
+                            <Link to ={`/categories/${category.category_name}`}>
+                            <h2>{category.category_name}</h2>
+
+                            </Link>
                         </li>
                     )
                 })} 
             </ul>
+          
             
         </div>
     );

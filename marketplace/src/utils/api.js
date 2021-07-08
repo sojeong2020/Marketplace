@@ -12,7 +12,26 @@ export const fetchItemById = (item_id) =>{
     return axios
     .get(`https://nc-marketplace.herokuapp.com/api/items/${item_id}`)
     .then((response)=>{
-        console.log(response)
-        return response.data.item
+        return response.data.item;
     })
 }
+
+
+
+export const fetchCategory = () =>{
+    return axios
+    .get('https://nc-marketplace.herokuapp.com/api/categories')
+    .then((response)=>{
+        return response.data.categories;
+    })
+}
+
+export const fetchItemsByCategory = (category_name) =>{
+    return axios
+    .get(`https://nc-marketplace.herokuapp.com/api/items?category_name=${category_name}`)
+    .then((response)=>{
+        console.log(response.data)
+        return response.data;
+    })
+}
+

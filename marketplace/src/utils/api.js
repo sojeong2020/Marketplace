@@ -39,3 +39,12 @@ export const fetchUsers = () =>{
         return response.data.users
     })
 }
+
+export const patchKudos = (username,increment) =>{
+    return axios
+    .patch(`https://nc-marketplace.herokuapp.com/api/users/${username}`,{kudos_inc:increment})
+    .then((response)=>{
+      console.log(response.data);
+      return response.data;
+    })
+}

@@ -2,7 +2,7 @@ import {useState, useEffect, useContext} from 'react';
 import {fetchUsers} from '../utils/api';
 import { UserContext } from '../contexts/User';
 import avatar from '../images/avatar.jpg';
-
+import Kudos from './Kudos';
 
 
 
@@ -18,7 +18,7 @@ useEffect(()=>{
 
 
     return (
-        <main>
+        <main className="Users">
             <h2>Change user</h2>
             <ul className="Users_list">
                 {users.map((user)=>{
@@ -29,9 +29,10 @@ useEffect(()=>{
                         src={user.avatar_url === "" 
                          || user.avatar_url === "test" 
                          ||  user.avatar_url === "https://test"
-                         ||   user.avatar_url === null 
+                         ||  user.avatar_url === null 
                          ||  user.avatar_url === "https://image"? avatar : user.avatar_url}
                         alt={user.username}></img>
+                        <Kudos kudos={user.kudos} username={user.username} />
                         <button 
                         onClick={()=>{
                             setUser(user)

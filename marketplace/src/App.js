@@ -9,6 +9,7 @@ import Category from './components/Category';
 import SortedCategory from './components/SortedCategory';
 import {UserContext} from './contexts/User';
 import UsersList from './components/UsersList';
+import Kudos from './components/Kudos';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
        </Route>
        <Route exact path="/users">
          <UsersList setUser={setUser} />
+       </Route>
+       <Route  exact path="/users/:username">
+         <Kudos />
        </Route>
        <Route>
          <p>404 - Not Found</p>

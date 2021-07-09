@@ -4,7 +4,6 @@ import { useContext } from 'react';
 
 const Header = () => {
     const {user} = useContext(UserContext);
-    console.log(user,"user in header")
 
     return (
         <nav className="Nav">

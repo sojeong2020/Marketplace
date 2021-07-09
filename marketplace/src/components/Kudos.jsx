@@ -6,18 +6,26 @@ const Kudos = ({username, kudos}) => {
     const [kudosChange, setKudosChange] = useState(0);
 //create some state to keep track of how much a user has been kudos
 
+    const [hasError, setHasError]= useState(false);
+
     const incKudos = () => {
-        patchKudos(username,1)
-        .then(()=>{
-            setKudosChange((currKudosChange)=>{
-                return currKudosChange + 1;
-            });
+        setHasError(false);
+
+        setKudosChange((currKudosChange)=>{
+            return currKudosChange + 1;
         });
+
+        patchKudos(username,1).catch((err)=>{
+            setHasError(true);
+            setKudosChange(0);
+        })
+        
     }
     return (
         <section>
             <p>Kudos: {kudos + kudosChange}</p>
-            <button onClick={incKudos}> 💖 </button>
+            {hasError && <p>Oops! Something's gone wrong!</p>}
+            <button disabled={kudosChange > 0} onClick={incKudos}> 💖 </button>
         </section>
     );
 };

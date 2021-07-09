@@ -36,7 +36,6 @@ export const fetchUsers = () =>{
     return axios
     .get('https://nc-marketplace.herokuapp.com/api/users')
     .then((response)=>{
-        console.log(response.data.users)
         return response.data.users
     })
 }

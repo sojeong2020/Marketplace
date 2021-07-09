@@ -25,7 +25,7 @@ const SortedCategory = () => {
                         <li key={category.item_id}>
                             
                             <h2>{category.item_name}</h2>
-                            <img className="Category-img" src={category.img_url} alt={category.item_name}></img>
+                            <img className="Category_img" src={category.img_url} alt={category.item_name}></img>
                             
                         </li>
                     )

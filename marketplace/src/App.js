@@ -42,7 +42,7 @@ function App() {
          <SortedCategory />
        </Route>
        <Route exact path="/users">
-         <UsersList />
+         <UsersList setUser={setUser} />
        </Route>
        <Route>
          <p>404 - Not Found</p>

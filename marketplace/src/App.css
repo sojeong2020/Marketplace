@@ -79,7 +79,19 @@
 .Sorted_category {
   list-style: none;
 }
-.Category-img {
+.Category_img {
+  width:200px;
+  height:200px;
+  border-radius: 100%;
+}
+
+/*.............................UsersLIst...................................*/
+
+.Users_list {
+  list-style: none;
+
+}
+.Users_img {
   width:200px;
   height:200px;
   border-radius: 100%;

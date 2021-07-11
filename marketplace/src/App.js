@@ -11,6 +11,7 @@ import SortedCategory from './components/SortedCategory';
 import {UserContext} from './contexts/User';
 import UsersList from './components/UsersList';
 import Kudos from './components/Kudos';
+import Basket from './components/Basket';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
          <ItemsList />
        </Route>
        <Route exact path="/items/:item_id">
-         <SingleItem />
+         <SingleItem user={user}/>
        </Route>
        <Route exact path="/categories">
         <Category />
@@ -48,6 +49,9 @@ function App() {
        </Route>
        <Route  exact path="/users/:username">
          <Kudos />
+       </Route>
+       <Route exact path ='/users/:username/basket'>
+         <Basket user={user} />
        </Route>
        <Route>
          <p>404 - Not Found</p>

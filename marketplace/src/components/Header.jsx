@@ -8,18 +8,18 @@ const Header = () => {
     return (
         <nav className="Nav">
             <div>
-            <Link className="Nav_link" to="/"> <i class="fas fa-store"></i> MarketPlace</Link>
+            <Link className="Nav_link" to="/">MarketPlace</Link>
             </div>
 
             <div>
             <Link className="Nav_link" to="/items">Items</Link>
             <Link className="Nav_link" to="/categories">Categories</Link>
-            <Link className="Nav_link">Basket</Link>
+            <Link className="Nav_link" to="/users/:username/basket">Basket</Link>
             </div>
-            
+
             <div>
             <Link className="Nav_link" to="/users">
-            <span>Loggined as: {user.username}</span>
+            <span>Loggined as {user.username}</span>
             </Link>
             </div>
         </nav>

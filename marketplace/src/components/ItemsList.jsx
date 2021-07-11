@@ -20,7 +20,7 @@ return (
              {items.map((item)=>{
                 return (
                 <div className="Items_list">
-                   <li key={item.item_id}>
+                   <li key={item.item_name}>
                    <p>{item.item_name}</p>
                    <Link 
                    to={`/items/${item.item_id}`} >

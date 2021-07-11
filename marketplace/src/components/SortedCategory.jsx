@@ -10,6 +10,7 @@ const SortedCategory = () => {
 
     useEffect(()=>{
         fetchItemsByCategory(category_name).then((categories)=>{
+            console.log(categories,"categories")
                 setSortedCategories(categories.items)
         })
     },[category_name]);

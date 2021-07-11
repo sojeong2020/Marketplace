@@ -48,3 +48,12 @@ export const patchKudos = (username,increment) =>{
       return response.data;
     })
 }
+
+export const fetchBasketByUsername = (username) => {
+    return axios
+    .get(`https://nc-marketplace.herokuapp.com/api/users/${username}/basket`)
+    .then((response)=>{
+        console.log(response.data);
+        return response.data
+    })
+}

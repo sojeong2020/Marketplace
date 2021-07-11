@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import {useParams} from 'react-router-dom';
 import { fetchItemById } from "../utils/api";
+import { Link } from 'react-router-dom';
+
 
 const SingleItem = () => {
     const [item, setItem] = useState({});
     const {item_id} = useParams();
+   
 
     useEffect(()=>{
         fetchItemById(item_id).then((item)=>{
@@ -20,7 +23,9 @@ const SingleItem = () => {
            <img className="Item_img" src={item.img_url}alt={item.item_name}></img>
            <p>{item.description}</p>
            <p>{item.price}</p>
+           <Link to="/">
            <button>Add to the basket</button>
+           </Link>
            <button>Order now</button>
 
        </main>

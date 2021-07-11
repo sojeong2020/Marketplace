@@ -16,18 +16,19 @@ const ItemsList = () => {
 return (
         <main>
             
-            <ul className="Items_list">
+            <ul>
              {items.map((item)=>{
                 return (
+                <div className="Items_list">
                    <li key={item.item_id}>
                    <p>{item.item_name}</p>
                    <Link 
                    to={`/items/${item.item_id}`} >
                    <img className="Items_img" src={item.img_url} alt={item.item_name} ></img>
                    </Link>
-                   
                    </li>
-                   )
+                </div>
+                      )
                }
              )}
             </ul>

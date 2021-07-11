@@ -20,6 +20,8 @@ const SingleItem = () => {
            <img className="Item_img" src={item.img_url}alt={item.item_name}></img>
            <p>{item.description}</p>
            <p>{item.price}</p>
+           <button>Add to the basket</button>
+           <button>Order now</button>
 
        </main>
     );

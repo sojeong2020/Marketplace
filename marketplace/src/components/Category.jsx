@@ -10,7 +10,6 @@ const Category = () => {
 
     useEffect(()=> {
         fetchCategory().then((categories)=>{
-         console.log(categories)
          setCategories(categories)
         })
         },[])

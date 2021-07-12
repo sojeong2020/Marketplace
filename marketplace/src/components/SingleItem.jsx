@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const SingleItem = () => {
     const [item, setItem] = useState({});
     const {item_id} = useParams();
-   
 
     useEffect(()=>{
         fetchItemById(item_id).then((item)=>{

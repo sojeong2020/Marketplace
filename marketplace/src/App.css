@@ -129,3 +129,14 @@
  
 
 }
+
+/*.............................Basket...................................*/
+
+.Basket {
+  list-style: none;
+}
+.Basket_img {
+  width:200px;
+  height:200px;
+  border-radius: 10%;
+}

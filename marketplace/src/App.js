@@ -15,6 +15,7 @@ import Basket from './components/Basket';
 
 
 function App() {
+  const [basket,setBasket]=useState([]);
   const [user,setUser]=useState(
     {
       "username": "Paul-C",
@@ -51,7 +52,7 @@ function App() {
          <Kudos />
        </Route>
        <Route exact path ='/users/:username/basket'>
-         <Basket user={user} />
+         <Basket basket={basket} setBasket={setBasket}/>
        </Route>
        <Route>
          <p>404 - Not Found</p>
